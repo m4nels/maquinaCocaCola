@@ -35,15 +35,17 @@ public class Maquina {
 	}
 	
 	//exprender producto -------------------------------
-	public void exprederProducto(Spring nombre, double precio, int stock, int unidadesVendidas) {
-		if(this.saldo > precio && stock > 0) {
-			stock = stock-1;
-			unidadesVendidas = unidadesVendidas+1;
-			this.saldo -= precio;
-			System.out.println("Ha elegido usted: "+nombre);
+	public void exprederProducto(Producto producto) {
+		if(this.saldo > producto.getPrecio() && producto.getStock() > 0) {
+			
+			producto.setStock(producto.getStock()-1);
+			producto.setUnidadesVendidas(producto.getUnidadesVendidas()+1);
+			
+			this.saldo -= producto.getPrecio();
+			System.out.println("Ha elegido usted: "+producto.getNombre());
 			System.out.println("Retire su producto. Gracias por su compra.");
 		}
-		else if(this.saldo > precio && stock < 0) {
+		else if(this.saldo > producto.getPrecio() && producto.getStock() < 0) {
 			//producto agotado -------------------------------
 			System.out.println("Producto agotado. Retire su dinero.");
 			System.out.println();

@@ -116,7 +116,7 @@ public class Main {
 					break;
 				//--------------------- EXPRENEDOR PRODUCTOS ---------------------
 				case 1:
-					//exprendedora.exprederProducto(refresco01.getNombre(), refresco01.getPrecio(), refresco01.getStock(), refresco01.getUnidadesVendidas());
+					exprendedora.exprederProducto(refresco01);
 					break;
 				case 2:
 					//exprendedora.exprederProducto(refresco01.getNombre(), refresco01.getPrecio(), refresco01.getStock(), refresco01.getUnidadesVendidas());
